@@ -1,1 +1,242 @@
 
+/* style.scss */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+// Variables
+$primary-color: #006B9F;
+$secondary-color: #006B9F;
+
+// Global Styles
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.header {
+  grid-area: header;
+  background-image: url("formule.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "left right" "left right" "left right";
+  height: 1600px;
+}
+
+.left {
+  grid-area: left;
+  padding: 10px;
+  height: 1500px;
+  border-radius: 5px;
+  margin: 10px 0;
+  border: solid lightcoral;
+  background-image: url("1_2_3.jpg");
+}
+
+.right {
+  grid-area: right;
+  background-color: #e0e0e0;
+  padding: 10px;
+  height: 1500px;
+  border-radius: 5px;
+  text-indent: 20px;
+  margin: 10px 0;
+}
+
+.footer {
+  grid-area: footer;
+  padding: 10px;
+  text-align: center;
+  height: auto;
+  background: #15151e;
+  color: #fff;
+}
+
+@media (max-width: 2000px) {
+  .main {
+    display: block;
+    height: auto;
+  }
+  .left,
+  .right {
+    height: auto;
+  }
+}
+
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: blanchedalmond;
+}
+
+label {
+  margin: 10px 0;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+input[type="submit"] {
+  background-color: #006B9F;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type="submit"]:hover {
+  background-color: $secondary-color;
+}
+
+.right h2 {
+  display: block;
+  padding: 0;
+}
+
+.boton {
+  background-color: #FFDCAE;
+  border-radius: 0em;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-md-4 {
+  width: 33.33%;
+}
+
+/* Advanced Features */
+
+// SCSS Syntax and Compilation
+$font-size: 18px;
+$text-color: #333;
+
+body {
+  font-size: $font-size;
+  color: $text-color;
+}
+
+// Media Queries
+@media (max-width: 768px) {
+  .header {
+    height: 15vh;
+  }
+
+  .left,
+  .right {
+    height: 1200px;
+  }
+
+  .right h2 {
+    font-size: $font-size + 4;
+  }
+}
+
+// CSS Animations
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in-element {
+  animation: fade-in 1s ease-in-out;
+}
+
+// Advanced Grid and Flexbox
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 20px;
+}
+
+.left {
+  border: 2px solid #006B9F;
+  animation: myAnimation 4s infinite;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  animation: myAnimation 2s infinite;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// Bootstrap
+.container {
+  padding: 20px;
+}
+
+.btn {
+  background-color: #006B9F;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background-color: $secondary-color;
+}
+
+.alert {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f2dede;
+  color: #a94442;
+}
+
+.success {
+  background-color: #dff0d8;
+  color: #3c763d;
+}
